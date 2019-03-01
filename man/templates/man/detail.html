@@ -1,0 +1,15 @@
+<h1>{{ oko.na }}</h1>
+<ul>
+{% for x in oko.dapis_set.all.distinct %}    
+    <li>{{ x.da }}</li>    
+    <ul>
+    {% for y in x.bar_set.all %}
+        {% if y.otpr_id == oko.id %}        
+            <li><a href="{% url 'man:barr' y.id %}">{{ y.otpr.na }}</a></li>
+            
+        
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% endfor %}
+</ul>

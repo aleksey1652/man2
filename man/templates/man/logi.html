@@ -1,0 +1,17 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'man/style.css' %}">
+
+{% if mservice_list %}
+<h4>Почта:</h4>
+    <ul>
+    {% for o in mservice_list %}        
+        <li><a href="{% url 'man:man_sender' o.id %}">{{ o.lo }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No man are available.</p>
+{% endif %}
+
+
+

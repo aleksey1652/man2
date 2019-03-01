@@ -1,0 +1,14 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'man/style2.css' %}">
+
+{% if otpr_list %}
+<h4>Отправители писем:</h4>
+    <ul>
+    {% for o in otpr_list %}        
+        <li><a href="{% url 'man:detail' o.id %}">{{ o.na }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No man are available.</p>
+{% endif %}
