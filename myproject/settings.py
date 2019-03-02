@@ -33,8 +33,8 @@ MEDIA_URL = 'http://127.0.0.1:8000/home/aleksey/myproject/'
 # Application definition
 
 INSTALLED_APPS = [
-    'ma.apps.MaConfig',
-    'polls.apps.PollsConfig',
+#    'ma.apps.MaConfig',
+#    'polls.apps.PollsConfig',
     'man.apps.ManConfig',
     'django.contrib.admin',
     'django.contrib.auth',
