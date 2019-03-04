@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','7$v#ku75r*1ma1obrbt_^s7mvp#cr%n
 #DEBUG = True
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
-ALLOWED_HOSTS = ['desolate-badlands-74572.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['desolate-badlands-74572.herokuapp.com/man/','127.0.0.1:5000']
 MEDIA_ROOT = '/home/aleksey/myproject/'
 MEDIA_URL = 'http://127.0.0.1:8000/home/aleksey/myproject/'
 
