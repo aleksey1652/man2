@@ -5,7 +5,6 @@
 {% if otpr_list %}
 <h4>Отправители писем:</h4>
 <li>{{m.lo}}</li>
-<li>{{ch}}</li>
     <ul>
     {% for o in otpr_list %}        
         <li><a href="{% url 'man:detail' o.id %}">{{ o.na }}</a></li>
@@ -14,9 +13,12 @@
 {% else %}
     <p>Таких нет.</p>
 {% endif %}
-<form action="{% url 'man:your_name' ch m.id  %}" method="post">
+<form action="{% url 'man:radio' m.id %}" method="post">
 {% csrf_token %}
-    <label for="your_name">Ваше имя: </label>
-    <input id="your_name" type="text" name="your_name" >
-<input type="submit" value="OK"/>
+    {% for ch,p in ch_list %}
+    <input type="radio" name="ch" id="ch{{ forloop.counter }}" value="{{ ch }}" />
+    <label for="ch{{ forloop.counter }}">{{p}}</label><br />
+{% endfor %}
+<input type="submit" value="Дальше" />
 </form>
+

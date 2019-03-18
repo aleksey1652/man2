@@ -1,9 +1,13 @@
 <h4>Номер письма:</h4>
+{% if oo %}
 <li>{{oo.nu}}</li>
 <h4>Тема письма:</h4>
 <li>{{oo.subj}}</li>
 <h4>Текст письма:</h4>
 <li>{{oo.text}}</li>
+{% else %}
+<p>Таких нет</p>
+{% endif %}
 {% if oo.htmlt2 %}
     <h4>Прикрепленные файлы письма:</h4>
     <li><a href="{% url 'man:fill' oo.id %}">{{ oo.nu }}</a></li>

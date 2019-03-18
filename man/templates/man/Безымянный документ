@@ -1,0 +1,6 @@
+<input type="radio" name="ch" id="ch" value="{{5}}">
+    <label for="ch">Поиск по оправителю</label>
+    <input type="submit" value="Дальше"><br>
+    <input type="radio" name="ch" id="ch" value="{{10}}">
+    <label for="ch">Поиск по теме</label>
+    <input type="submit" value="Дальше">
